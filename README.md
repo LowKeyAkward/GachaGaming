@@ -17,7 +17,7 @@ Gacha Gaming is a recreation of what it feels like to play gacha games(lootbox g
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+The API being used for this project is https://airtable.com/api
 
 ### MVP/PostMVP  
 
