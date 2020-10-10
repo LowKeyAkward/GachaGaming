@@ -6,14 +6,14 @@ Gacha Gaming
 
 ## Project Description
 
-Gacha Gaming is a recreation of what it feels like to play gacha games(lootbox games), by using React and Airtable to create a limited pool of characters you can draw from. The higher the rarity of a character the lower percentage chance you have of getting the character. All characters will have stats and art, but the rarer they get the better they become. Airtable will be used to store the users information, as well as store what the characters the user has pulled. This information will later be pulled from airtable to play a simple game.
+Gacha Gaming is a recreation of what it feels like to play gacha games(lootbox games), by using React and Airtable to create a limited pool of characters you can draw from. The higher the rarity of a character the lower percentage chance you have of getting the character. All characters will have stats and art, but the rarer they get the better they become. Airtable will be used to store the characters the user can pull. The user than will be put into battle using the character that they have pulled, and the victories and defeats of the character will be recorded on airtable.
 
 ## Wireframes
 
 ![Wireframe](https://i.imgur.com/4HuEB0i.jpg)
 
 ## Component Hierarchy
-![Hierarchy](https://i.imgur.com/OMncdkh.jpg)
+![Hierarchy](https://i.imgur.com/ja5U2RO.jpg)
 
 ## API and Data Sample
 
@@ -23,8 +23,8 @@ The API being used for this project is https://airtable.com/api
 
 #### MVP 
 
-- Pull data of the JSON and push it onto Airtable
-- Pulls the data off Airtable and displays it
+- Posts victory and defeat data onto Airtable
+- Pulls the character data off Airtable and displays it
 - Uses character data and pits it off against an opposing enemies data.
 
 #### PostMVP  
