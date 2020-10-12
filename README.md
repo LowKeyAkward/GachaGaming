@@ -13,7 +13,7 @@ Gacha Gaming is a recreation of what it feels like to play gacha games(lootbox g
 ![Wireframe](https://i.imgur.com/4HuEB0i.jpg)
 
 ## Component Hierarchy
-![Hierarchy](https://i.imgur.com/ja5U2RO.jpg)
+![Hierarchy](https://i.imgur.com/ja5U2R0.jpg)
 
 ## API and Data Sample
 
