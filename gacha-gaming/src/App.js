@@ -1,31 +1,24 @@
 import React,{useEffect,useState} from 'react';
 import axios from "axios"
+import { Route, Link } from "react-router-dom"
 
 import Homepage from "./Homepage"
 import Roll from "./Roll.jsx"
+import Leaderboard from "./Leaderboard"
 import './App.css';
 
 function App() {
-  // const airTablePost = async (e) => {
-  //   e.preventDefault();
-  //   const fields = {
-  //     id
-  //   }
-  //   const airtableurl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/gacha_gaming`
-  //   await axios.post(
-  //     airtableurl,
-  //     { fields }, {
-  //       headers: {
-  //         Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-  //       }
-  //     }
-  //   )
-  // }
-
   return (
     <div className="App">
+      <Route exact path="/">
       <Homepage />
-      <Roll />
+      </Route>
+      <Route path="/roll">
+        <Roll />
+      </Route>
+      <Route path="/leaderboard">
+        <Leaderboard />
+      </Route>
     </div>
   );
 }

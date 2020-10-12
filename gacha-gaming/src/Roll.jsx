@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
+import { Link, Route } from "react-router-dom"
 
 function Roll(props) {
   const [characterData, setCharacterData] = useState([])
@@ -19,14 +20,14 @@ function Roll(props) {
     console.log(characterData)
   }, [])
 
-  let random = characterData[Math.floor(Math.random() * characterData.length)]
-  console.log(random)
+  const randomRoll = (array) => Math.floor(Math.random()*array.length)
 
   return (
     <div>
-      {characterData.map((character) => (
+      {characterData.map((character) => ( 
         <h2>{character.fields.hero_name}</h2>
       ))}
+      <Link to="/">Return</Link>
     </div>
   )
 }

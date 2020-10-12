@@ -1,4 +1,5 @@
 import React from "react"
+import {Route, Link} from "react-router-dom"
 
 function Leaderboard(props) {
   return (
@@ -6,7 +7,7 @@ function Leaderboard(props) {
       {/* pull the victory and defeat record from Airtable */}
       <h1>Leaderboard</h1>
       {/* return to the Homepage.jsx */}
-      <h2>Return to Title</h2>
+      <Link to="/">Return to Title</Link>
     </div>
   )
 }

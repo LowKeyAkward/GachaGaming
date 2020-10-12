@@ -1,4 +1,5 @@
 import React from "react"
+import {Route, Link} from "react-router-dom"
 
 function Homepage() {
   return (
@@ -6,9 +7,9 @@ function Homepage() {
       {/* title */}
       <h1>Gacha Gaming</h1>
       {/* Link button that will take you to the Roll.jsx */}
-      <h2>Start</h2>
+      <Link to="/roll">Start</Link>
       {/* Link button that will take you to the leaderboard.jsx */}
-      <h2>Leaderboard</h2>
+      <Link to="/leaderboard">Leaderboard</Link>
     </div>
   )
 }
