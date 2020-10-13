@@ -8,13 +8,35 @@ import Leaderboard from "./Leaderboard"
 import './App.css';
 
 function App() {
+  const [roll, setRoll] = useState({})
+  const [characterData, setCharacterData] = useState([])
+  
+
+  const randomRoll = (array) => array[Math.floor(Math.random() * array.length)];
+
+  //upon load pull airtable data and set it to characterData
+  useEffect(() => {
+    const getCharacterData = async () => {
+      const airtableurl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/gacha_gaming`
+      const response = await axios.get(airtableurl, {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+        }
+      })
+      setCharacterData(response.data.records)
+      setRoll(randomRoll(response.data.records))
+    }
+    getCharacterData()
+
+  }, [])
+
   return (
     <div className="App">
       <Route exact path="/">
       <Homepage />
       </Route>
       <Route path="/roll">
-        <Roll />
+        <Roll roll={roll} />
       </Route>
       <Route path="/leaderboard">
         <Leaderboard />

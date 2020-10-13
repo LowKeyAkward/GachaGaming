@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {Route, Link} from "react-router-dom"
 
 function Homepage() {
@@ -7,9 +7,17 @@ function Homepage() {
       {/* title */}
       <h1>Gacha Gaming</h1>
       {/* Link button that will take you to the Roll.jsx */}
-      <Link to="/roll">Start</Link>
+      <Link to="/roll">
+        <button>
+          Start
+        </button>
+        </Link>
       {/* Link button that will take you to the leaderboard.jsx */}
-      <Link to="/leaderboard">Leaderboard</Link>
+      <Link to="/leaderboard">
+        <button>
+          Leaderboard
+        </button>
+        </Link>
     </div>
   )
 }
