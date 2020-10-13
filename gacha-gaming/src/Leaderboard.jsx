@@ -1,5 +1,6 @@
 import React from "react"
-import {Route, Link} from "react-router-dom"
+import { Route, Link } from "react-router-dom"
+import axios from "axios"
 
 function Leaderboard(props) {
   return (

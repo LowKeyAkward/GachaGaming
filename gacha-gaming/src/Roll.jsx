@@ -20,12 +20,17 @@ function Roll(props) {
     console.log(characterData)
   }, [])
 
-  const randomRoll = (array) => Math.floor(Math.random()*array.length)
+  const randomRoll = (array) => Math.floor(Math.random() * array.length)
+  let hero = randomRoll(characterData)
+  console.log(hero)
 
   return (
     <div>
       {characterData.map((character) => ( 
-        <h2>{character.fields.hero_name}</h2>
+        <div>
+          {/* <img src={character.fields.hero_img}></img> */}
+          {character.fields.hero_name}
+        </div>
       ))}
       <Link to="/">Return</Link>
     </div>
