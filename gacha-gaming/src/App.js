@@ -6,11 +6,15 @@ import Homepage from "./Homepage"
 import Roll from "./Roll.jsx"
 import Battle from "./Battle.jsx"
 import Leaderboard from "./Leaderboard"
+import Victory from "./Victory"
+import Defeat from "./Defeat"
+
 import './App.css';
 
 function App() {
+ 
   const [roll, setRoll] = useState({})
-  
+  const [characterStat, setCharacterStat] = useState([])
 
   const randomRoll = (array) => array[Math.floor(Math.random() * array.length)];
 
@@ -23,26 +27,41 @@ function App() {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       })
+      setCharacterStat(response.data.records)
       setRoll(randomRoll(response.data.records))
     }
     getCharacterData()
 
   }, [])
 
+
   return (
     <div className="App">
+      
       <Route exact path="/">
       <Homepage />
       </Route>
+      
       <Route path="/roll">
         <Roll roll={roll} />
       </Route>
+      
       <Route path="/battle">
         <Battle roll={roll} />
       </Route>
+      
       <Route path="/leaderboard">
-        <Leaderboard />
+        <Leaderboard characterStat={characterStat}/>
       </Route>
+
+      <Route path="/victory">
+        <Victory roll={roll}/>
+      </Route>
+
+      <Route path="/defeat">
+        <Defeat roll={roll}/>
+      </Route>
+    
     </div>
   );
 }

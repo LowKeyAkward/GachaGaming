@@ -9,14 +9,19 @@ function Roll(props) {
 
   return (
     <div>
+      
       <img className="rollImage" src={props.roll.fields.hero_img} alt={props.roll.fields.hero_name} ></img>
+      
       <p>{props.roll.fields.hero_name}</p>
+      
       <Link to="/battle">
         <button>Battle</button>
-       </Link>
+      </Link>
+      
       <Link to="/">
         <button>Return</button>
       </Link>
+    
     </div>
   )
 }
