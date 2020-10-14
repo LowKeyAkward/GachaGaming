@@ -20,25 +20,29 @@ function Battle(props) {
 
   //Button...damage the hero deals to enemy
   let heroAttack = () => {
-    if (yourTurn === true) {
+    if (yourTurn) {
       setEnemyHp(enemyHp - heroDmg)
-      setYourTurn(false)
+      setYourTurn(!yourTurn)
+      setHeroHp(heroHp - 10)
+      setYourTurn(true)
     }
   }
   
   //Button...the amount of hp Hero will recover
   let heroHeal = () => {
-    if (yourTurn === true) {
+    if (yourTurn) {
       setHeroHp(heroHp + 10)
-      setYourTurn(false)
-    }
-  }
-
-  //The set enemy's attack
-    if (yourTurn === false) {
+      setYourTurn(!yourTurn)
       setHeroHp(heroHp - 10)
       setYourTurn(true)
     }
+  }
+
+  // The set enemy's attack  
+  // if (yourTurn === false) {
+  //     setHeroHp(heroHp - 10)
+  //     setYourTurn(true)
+  //   }
 
 
   //win/loss conditions
@@ -58,8 +62,11 @@ function Battle(props) {
     <div>
       <p>Hero:{heroHp}</p>
       <p>Enemy:{enemyHp}</p>
+      
       <button onClick={heroAttack}>Attack</button>
+      
       <button onClick={heroHeal}>Heal</button>
+     
       <Link to="/">
         <button>quit</button>
       </Link>
