@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { Link, Route } from "react-router-dom"
+import React from "react"
+import { Link } from "react-router-dom"
 
 function Roll(props) {
 
@@ -10,9 +9,11 @@ function Roll(props) {
 
   return (
     <div>
-      <img className="rollImage" src={props.roll.fields.hero_img} ></img>
+      <img className="rollImage" src={props.roll.fields.hero_img} alt={props.roll.fields.hero_name} ></img>
       <p>{props.roll.fields.hero_name}</p>
-      <button>Battle</button>
+      <Link to="/battle">
+        <button>Battle</button>
+       </Link>
       <Link to="/">
         <button>Return</button>
       </Link>

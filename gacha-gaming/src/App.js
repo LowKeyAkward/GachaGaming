@@ -1,15 +1,15 @@
 import React,{useEffect,useState} from 'react';
 import axios from "axios"
-import { Route, Link } from "react-router-dom"
+import { Route } from "react-router-dom"
 
 import Homepage from "./Homepage"
 import Roll from "./Roll.jsx"
+import Battle from "./Battle.jsx"
 import Leaderboard from "./Leaderboard"
 import './App.css';
 
 function App() {
   const [roll, setRoll] = useState({})
-  const [characterData, setCharacterData] = useState([])
   
 
   const randomRoll = (array) => array[Math.floor(Math.random() * array.length)];
@@ -23,7 +23,6 @@ function App() {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       })
-      setCharacterData(response.data.records)
       setRoll(randomRoll(response.data.records))
     }
     getCharacterData()
@@ -37,6 +36,9 @@ function App() {
       </Route>
       <Route path="/roll">
         <Roll roll={roll} />
+      </Route>
+      <Route path="/battle">
+        <Battle roll={roll} />
       </Route>
       <Route path="/leaderboard">
         <Leaderboard />
