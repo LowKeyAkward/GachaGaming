@@ -24,11 +24,11 @@ function Victory(props) {
   }
 
   return (
-    <div>
-      <h1>VICTORY</h1>
+    <div className="victory">
+      <h1 className="victoryText">VICTORY</h1>
       {/* display a victory screen and push up +1 to victories */}
       <Link to="/">
-        <button onClick={handleClick}>Return</button>
+        <button className="button greenButton" onClick={handleClick}>Return</button>
       </Link>
     </div>
   )

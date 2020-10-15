@@ -13,18 +13,18 @@ function Roll(props) {
   return (
     <div>
       
-      <img className="rollImage" src={props.roll.fields.hero_img} alt={props.roll.fields.hero_name} ></img>
+      <img className="rollImage rollGlitch" src={props.roll.fields.hero_img} alt={props.roll.fields.hero_name} ></img>
       
-      <p>{props.roll.fields.hero_name}</p>
+      <p className="rollGlitch">{props.roll.fields.hero_name}</p>
       
       <Link to="/battle">
-        <button className="button">Battle</button>
+        <button className="button redButton">Battle</button>
       </Link>
 
-      <button className="button" onClick={refresh} >Summon</button>
+      <button className="button blueButton" onClick={refresh} >Summon</button>
       
       <Link to="/">
-        <button className="button">Return</button>
+        <button className="button plainButton">Return</button>
       </Link>
     
     </div>

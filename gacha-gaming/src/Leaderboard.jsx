@@ -14,7 +14,7 @@ function Leaderboard(props) {
         </div>
       ))}
       {/* return to the Homepage.jsx */}
-      <Link to="/">Return to Title</Link>
+      <Link className="button greenButton" to="/">Return to Title</Link>
     </div>
   )
 }

@@ -22,11 +22,11 @@ function Defeat(props) {
     )
   }
   return (
-    <div>
-      <h1>DEFEAT</h1>
+    <div className="defeatDiv">
+      <p className="defeat">YOU DIED</p>
       {/* display a defeat screen and post a +1 to Defeats */}
       <Link to="/">
-        <button onClick={handleClick}>Return</button>
+        <button className="button greenButton" onClick={handleClick}>Return</button>
       </Link>
     </div>
   )
