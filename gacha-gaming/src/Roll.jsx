@@ -2,6 +2,9 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 function Roll(props) {
+  const refresh = () => {
+    window.location.reload(false)
+  }
 
   if (!props.roll.fields) {
     return null
@@ -15,11 +18,13 @@ function Roll(props) {
       <p>{props.roll.fields.hero_name}</p>
       
       <Link to="/battle">
-        <button>Battle</button>
+        <button className="button">Battle</button>
       </Link>
+
+      <button className="button" onClick={refresh} >Summon</button>
       
       <Link to="/">
-        <button>Return</button>
+        <button className="button">Return</button>
       </Link>
     
     </div>

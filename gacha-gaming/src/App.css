@@ -1,3 +1,7 @@
+body{
+  background-color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -39,4 +43,111 @@
 .rollImage{
   height: 500px;
   width: auto;
+}
+
+.battle{
+  background-image: url("https://static.wikia.nocookie.net/feheroes_gamepedia_en/images/8/89/BG_BraveBridge.png/revision/latest?cb=20170924202644&format=original");
+  background-position: center center;
+  background-size: contain;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.battleHero {
+  height: 400px;
+  width: auto;
+  margin-right: 40px;
+}
+
+.battleEnemy {
+  height: 400px;
+  width: auto;
+}
+
+.healthBar{
+  position: relative;
+  height: 20px;
+  width: 350px;
+  border-radius: 50px;
+  border: 1px solid black
+}
+
+.healthHero{
+  background: #00ccc2;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+
+.button{
+  width: 170px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.redButton{
+  background-color: black;
+  border: 3px solid #f00909;
+  color: #f00909;
+  transition: .3s;
+}
+
+.redButton:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+.greenButton{
+  background-color: black;
+  border: 3px solid #18b155;
+  color: #18b155;
+  transition: .3s;
+}
+
+.greenButton:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+.whiteButton{
+  background-color: black;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.whiteButton:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+.plainButton{
+  background-color: white;
+  border: 3px solid black;
+  color: black;
+  transition: .3s;
+}
+
+.plainButton:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+@keyframes pulse {
+  0% {
+    transform:scale(1);
+  }
+  70% {
+    transform: scale(.9);
+  }
+  100%{
+    transform: scale(1);
+  }
 }

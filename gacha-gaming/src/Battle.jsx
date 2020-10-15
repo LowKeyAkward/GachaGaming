@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link, withRouter } from "react-router-dom"
 
 function Battle(props) {
+  
   //Enemy states
   const [enemyHp, setEnemyHp] = useState(100)
   
@@ -58,19 +59,27 @@ function Battle(props) {
     }
 
   return (
-    <div>
+    <div className="battle">
 
-      <p>Hero:{heroHp}</p>
-      <p>Enemy:{enemyHp}</p>
-      
-      <button onClick={heroAttack}>Attack</button>
-      
-      <button onClick={heroHeal}>Heal</button>
+      <div className="healthBar">
+        <div className="healthHero" style={{width: `${heroHp}%`}}>Hero:{heroHp}</div>
+        <div className="healthEnemy">Enemy:{enemyHp}</div>
+      </div>
 
-      <button onClick={endTurn}>End Turn</button>
+      <div classname="battleScene">
+        <img className="battleHero" src={props.roll.fields && props.roll.fields.hero_img} />
+        <img className="battleEnemy" src="https://vignette.wikia.nocookie.net/fategrandorder/images/5/55/Lancelot_NewSprite2.png/revision/latest?cb=20180911092724" />
+      </div>
+      
+      
+      <button className="button redButton" onClick={heroAttack}>Attack</button>
+      
+      <button className="button greenButton" onClick={heroHeal}>Heal</button>
+
+      <button className="button whiteButton" onClick={endTurn}>End Turn</button>
      
-      <Link to="/">
-        <button>Quit</button>
+      <Link to="/defeat">
+        <button className="button plainButton">Surrender</button>
       </Link>
 
     </div>
