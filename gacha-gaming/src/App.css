@@ -268,3 +268,12 @@ body{
   font-size: 100px;
 }
 
+
+table,th,td{
+  font-size: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid purple;
+  color: white;
+  margin-bottom: 20px;
+}

@@ -7,10 +7,20 @@ function Leaderboard(props) {
       {/* pull the victory and defeat record from Airtable */}
       <h1>Leaderboard</h1>
       {props.characterStat.map((characterStats) => (
-        <div>
-          <h2>{characterStats.fields.hero_name}</h2>
-          <h3>{characterStats.fields.victories}</h3>
-          <h3>{characterStats.fields.defeats}</h3>
+        <div className="leaderboard">
+          <table>
+            <tr>
+              <th>
+              {characterStats.fields.hero_name}
+              </th>
+              <th>
+                Victories: {characterStats.fields.victories}
+              </th>
+              <th>
+                Defeats: {characterStats.fields.defeats}
+              </th>
+            </tr>
+          </table>
         </div>
       ))}
       {/* return to the Homepage.jsx */}
