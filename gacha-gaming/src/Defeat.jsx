@@ -1,13 +1,32 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import axios from "axios"
 
 function Defeat(props) {
+  let integer = parseInt(props.roll.fields && props.roll.fields.defeats) + 1
+  let string = integer.toString()
+  let characterId = props.roll.id
+  const handleClick = async (e) => {
+    const fields = {
+      defeats: string
+    }
+    const airtableurl = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/gacha_gaming/${characterId}`
+    await axios.patch(
+      airtableurl,
+      { fields },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+        }
+      }
+    )
+  }
   return (
     <div>
       <h1>DEFEAT</h1>
       {/* display a defeat screen and post a +1 to Defeats */}
       <Link to="/">
-        <button>Quit</button>
+        <button onClick={handleClick}>Return</button>
       </Link>
     </div>
   )

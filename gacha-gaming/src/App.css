@@ -2,6 +2,40 @@
   text-align: center;
 }
 
+.titleVideo{
+ position: absolute;
+ width: 100%;
+ left: 50%;
+ top: 50%;
+ height: 100%;
+ object-fit: cover;
+ transform: translate(-50%,-50%);
+ z-index: -1;
+}
+.titleMenu{
+  position: fixed;
+  bottom:0;
+  background: rgba(0, 0,0, 0.5);
+  color:#f1f1f1;
+  width: 100%;
+  padding: 20;
+}
+
+.titleText{
+  font-family: 'Acme', sans-serif;
+}
+
+.titleButton {
+  font-family: 'Piazzolla', serif;
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+
+.titleButton:hover{
+  color: black;
+}
+
 .rollImage{
   height: 500px;
   width: auto;

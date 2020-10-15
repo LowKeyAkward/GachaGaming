@@ -1,25 +1,27 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import Fate from "./video/fate.mp4"
 
 function Homepage() {
   return (
-    <div>
+    <div className="opening">
+      <video className="titleVideo" autoPlay loop muted>
+        <source src={Fate} type="video/mp4"/>
+      </video>
+      <div className="titleMenu">
       {/* title */}
-      <h1>Gacha Gaming</h1>
+      <h1 className="titleText">Gacha Gaming</h1>
       
       {/* Link button that will take you to the Roll.jsx */}
-      <Link to="/roll">
-        <button>
+      <Link className="titleButton" to="/roll">
           Start
-        </button>
       </Link>
       
       {/* Link button that will take you to the leaderboard.jsx */}
-      <Link to="/leaderboard">
-        <button>
+      <Link className="titleButton" to="/leaderboard">
           Leaderboard
-        </button>
       </Link>
+        </div>
     
     </div>
   )
