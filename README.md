@@ -47,12 +47,12 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
+|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|July 13| Project Approval | Complete
+|July 13| Core Application Structure (HTML, CSS, etc.) | Complete
+|July 14| Pseudocode / actual code | Complete
+|July 15| Initial Clickable Model  | Complete
+|July 16| MVP | Complete
 |July 17| Presentations | Incomplete
 
 ## Timeframes
@@ -63,18 +63,18 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| | |
-| Working with Airtable | M | 2hrs|  |  |
-| Roll Component | H | 6hrs|  |  |
-| HP Component | H | 3hrs|  |  |
-| Victory Component | H | 3hrs|  |  |
-| Start Component | H | 1hrs|  |  |
-| Homepage Component| H | 1hrs|  |  |
-| CSS | H | 3hrs|  |  |
-| Animation | L | 5hrs|  |  |
-| Sound Effects | L | 3hrs|  |  |
-| Roll Percentage | M | 3hrs| | |
-| Total | H | 35hrs|  |  |
+| Adding Form | H | 3hrs| 3hrs | 3hrs |
+| Working with Airtable | M | 2hrs| 3hrs | 3hrs |
+| Roll Component | H | 6hrs| 5hrs | 5hrs |
+| HP Component | H | 3hrs| 3hrs | 3hrs |
+| Victory Component | H | 3hrs| 3hrs | 3hrs |
+| Start Component | H | 1hrs| 1hrs | 1hrs |
+| Homepage Component| H | 1hrs| 1hrs | 1hrs |
+| CSS | H | 3hrs| 3hrs | 3hrs |
+| Animation | L | 5hrs| 3hrs | 3hrs |
+| Sound Effects | L | 3hrs| 3hrs | 3hrs |
+| Roll Percentage | M | 3hrs| N/A | N/A |
+| Total | H | 35hrs| 28hrs | 28hrs |
 
 ## SWOT Analysis
 
