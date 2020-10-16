@@ -1,8 +1,14 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { Link } from "react-router-dom"
 import Fate from "./video/fate.mp4"
+import Glassy from "./sounds/GlassySkyKayou.mp3"
 
 function Homepage() {
+  let audio = new Audio(Glassy)
+
+  useEffect(() => {
+    audio.play()
+  }, [audio])
   return (
     <div className="opening">
       <video className="titleVideo" autoPlay loop muted>

@@ -8,7 +8,8 @@ function Battle(props) {
   
   //Hero states
   const [heroHp, setHeroHp] = useState(1000)
-  const [heroDmg, setHeroDmg] = useState(100)
+  const [heroMinDmg, setHeroMinDmg] = useState(100)
+  const [heroMaxDmg, setHeroMaxDmg] = useState(100)
   const [heroRecovery, setHeroRecovery] = useState(100)
  
   //Universal states
@@ -18,22 +19,24 @@ function Battle(props) {
   useEffect(() => {
     if (props.roll.fields) {
       setHeroHp(props.roll.fields.health_points)
-      setHeroDmg(props.roll.fields.damage)
+      setHeroMinDmg(props.roll.fields.damage)
+      setHeroMaxDmg(props.roll.fields.max_dmg)
       setHeroRecovery(props.roll.fields.healing)
     }
   },[props.roll.fields])
 
+
   //Enemy min max dmg
-  let dmg_done = Math.floor(Math.random() * (25 - 15 + 1) + 15)
+  let dmg_done = Math.floor(Math.random() * (50 - 20 + 1) + 15)
 
   //Hero min max dmg
-  // let hero_dmg = Math.floor(Math.random() * (25 - 15 + 1) + 15)
+  let hero_dmg = Math.floor(Math.random() * (heroMaxDmg - heroMinDmg + 1) + heroMinDmg)
 
 
   //Button...damage the hero deals to enemy
   let heroAttack = () => {
     if (yourTurn) {
-      setEnemyHp(enemyHp - heroDmg)
+      setEnemyHp(enemyHp - hero_dmg)
       setYourTurn(!yourTurn)
     }
   }
@@ -80,7 +83,8 @@ function Battle(props) {
         <img className="battleEnemy" alt="enemy" src="https://vignette.wikia.nocookie.net/fategrandorder/images/5/55/Lancelot_NewSprite2.png/revision/latest?cb=20180911092724" />
       </div>
       
-      
+      <button className="hidden"></button>
+
       <button className="button redButton" onClick={heroAttack}>Attack</button>
       
       <button className="button greenButton" onClick={heroHeal}>Heal</button>

@@ -1,11 +1,20 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
+import Died from "./sounds/youDied.mp3"
 
 function Defeat(props) {
+  
+  let audio = new Audio(Died)
+
   let integer = parseInt(props.roll.fields && props.roll.fields.defeats) + 1
   let string = integer.toString()
   let characterId = props.roll.id
+
+  useEffect(() => {
+    audio.play()
+  },[audio])
+
   const handleClick = async (e) => {
     const fields = {
       defeats: string

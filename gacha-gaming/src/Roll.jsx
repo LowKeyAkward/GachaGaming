@@ -21,7 +21,7 @@ function Roll(props) {
         <button className="button redButton">Battle</button>
       </Link>
 
-      <button className="button blueButton" onClick={refresh} >Summon</button>
+      <button className="button blueButton " onClick={refresh} >Summon</button>
       
       <Link to="/">
         <button className="button plainButton">Return</button>

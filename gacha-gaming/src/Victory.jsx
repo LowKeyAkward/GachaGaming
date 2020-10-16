@@ -1,12 +1,20 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {Link} from "react-router-dom"
 import axios from "axios"
+import Victorysound from "./sounds/Victory.mp3"
 
 function Victory(props) {
   
+  let audio = new Audio(Victorysound)
+
   let integer = parseInt(props.roll.fields && props.roll.fields.victories) + 1
   let string = integer.toString()
   let characterId = props.roll.id
+
+  useEffect(() => {
+    audio.play()
+  },[audio])
+
   const handleClick = async (e) => {
     const fields = {
       victories: string

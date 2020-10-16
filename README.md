@@ -4,6 +4,10 @@
 
 Gacha Gaming
 
+## Deployed Site
+
+https://suspicious-nightingale-3a9d39.netlify.app/
+
 ## Project Description
 
 Gacha Gaming is a recreation of what it feels like to play gacha games(lootbox games), by using React and Airtable to create a limited pool of characters you can draw from. The higher the rarity of a character the lower percentage chance you have of getting the character. All characters will have stats and art, but the rarer they get the better they become. Airtable will be used to store the characters the user can pull. The user than will be put into battle using the character that they have pulled, and the victories and defeats of the character will be recorded on airtable.
